@@ -1,0 +1,163 @@
+/* Basic styling for Pong game */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0;
+}
+
+.status {
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    border: 2px solid #555;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.score .label {
+    font-size: 0.9em;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.score-value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0f0;
+}
+
+#game-canvas {
+    border: 3px solid #0f0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    background-color: #000;
+    display: block;
+    margin: 0 auto;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.control-info {
+    text-align: left;
+}
+
+.control-info h3 {
+    margin-bottom: 10px;
+    color: #0f0;
+    font-size: 1.2em;
+}
+
+.control-info p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.control-info strong {
+    color: #fff;
+    display: inline-block;
+    min-width: 60px;
+}
+
+.messages {
+    margin-top: 20px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 5px;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-info {
+    background-color: #1e3a8a;
+    border: 1px solid #3b82f6;
+}
+
+.message-success {
+    background-color: #166534;
+    border: 1px solid #22c55e;
+}
+
+.message-error {
+    background-color: #7f1d1d;
+    border: 1px solid #ef4444;
+}
+
+/* Responsive design */
+@media (max-width: 850px) {
+    #game-canvas {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .control-info {
+        text-align: center;
+    }
+}

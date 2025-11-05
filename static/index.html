@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pong Game</h1>
+
+        <div id="status" class="status">
+            Connecting...
+        </div>
+
+        <div id="score-board" class="score-board">
+            <div class="score">
+                <span class="label">Player 1</span>
+                <span id="score-p1" class="score-value">0</span>
+            </div>
+            <div class="score">
+                <span class="label">Player 2</span>
+                <span id="score-p2" class="score-value">0</span>
+            </div>
+        </div>
+
+        <canvas id="game-canvas" width="800" height="600"></canvas>
+
+        <div class="controls">
+            <div class="control-info">
+                <h3>Player 1 Controls</h3>
+                <p><strong>W</strong> - Move Up</p>
+                <p><strong>S</strong> - Move Down</p>
+                <p><strong>A</strong> - Move Left</p>
+                <p><strong>D</strong> - Move Right</p>
+            </div>
+            <div class="control-info">
+                <h3>Player 2 Controls</h3>
+                <p><strong>↑</strong> - Move Up</p>
+                <p><strong>↓</strong> - Move Down</p>
+                <p><strong>←</strong> - Move Left</p>
+                <p><strong>→</strong> - Move Right</p>
+            </div>
+        </div>
+
+        <div id="messages" class="messages"></div>
+    </div>
+
+    <script src="/static/game.js"></script>
+</body>
+</html>
